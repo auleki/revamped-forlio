@@ -1,0 +1,35 @@
+* {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.root {
+  --header-height: 3em;
+
+  --hue-color: 250;
+
+  --first-color: hsl(var(var(--hue-color)), 69%, 61%);
+  --first-color-second: hsl(var(var(--hue-color)), 69%, 61%);
+  --first-color-alt: hsl(var(var(--hue-color)), 57%, 53%);
+  --first-color-lighter: hsl(var(var(--hue-color)), 92%, 85%);
+  --title-color: hsl(var(var(--hue-color)), 8%, 15%);
+  --text-color: hsl(var(var(--hue-color)), 8%, 45%);
+  --text-color-light: hsl(var(var(--hue-color)), 8%, 65%);
+  --input-color: hsl(var(var(--hue-color)), 70%, 96%);
+  --body-color: hsl(var(var(--hue-color)), 60%, 99%);
+  --container-color: #fff;
+
+  --big-font-size: 2em;
+  --h1-font-size: 1.5em;
+  --h2-font-size: 1.25em;
+  --h3-font-size: 1.125em;
+  --normal-font-size: .938em;
+  --small-font-size: .813em;
+  --smaller-font-size: 75em;
+
+  --font-medium: ;
+  --font-semi-bold: ;
+  
+}
