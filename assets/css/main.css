@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Poppins:wght@300;400&display=swap');
+
 * {
   border: 0;
   padding: 0;
@@ -5,11 +7,16 @@
   box-sizing: border-box;
 }
 
-.root {
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
   --header-height: 3em;
 
   --hue-color: 250;
 
+  /* BACKGROUND COLORS  */
   --first-color: hsl(var(var(--hue-color)), 69%, 61%);
   --first-color-second: hsl(var(var(--hue-color)), 69%, 61%);
   --first-color-alt: hsl(var(var(--hue-color)), 57%, 53%);
@@ -21,6 +28,10 @@
   --body-color: hsl(var(var(--hue-color)), 60%, 99%);
   --container-color: #fff;
 
+  /* FONTS AND TYPOGRAPHY  */
+  --body-font: 'Poppins', sans-serif;
+
+  /* FONT SIZES  */
   --big-font-size: 2em;
   --h1-font-size: 1.5em;
   --h2-font-size: 1.25em;
@@ -29,7 +40,98 @@
   --small-font-size: .813em;
   --smaller-font-size: 75em;
 
-  --font-medium: ;
-  --font-semi-bold: ;
+  /* FONT WEIGHT  */
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /* MARGIN  */
+  --mb-0-25: .25em;
+  --mb-0-5: .5em;
+  --mb-0-75: .75em;
+  --mb-1: 1em; 
+  --mb-1-5: 1.5em;
+  --mb-2: 2em;
+  --mb-2-5: 2.5em;
+  --mb-3: 3em;
   
+  /* Z INDEX  */
+  --z-tooltip: 10; 
+  --z-fixed: 100;
+  --z-modal: 1000;
 }
+
+ /* FONT SIZE FOR LARGER DEVICES  */
+
+ @media screen and (min-width: 968px) {
+   :root {
+    --big-font-size: 3em;
+    --h1-font-size: 2.25em;
+    --h2-font-size: 1.5em;
+    --h3-font-size: 1.25em;
+    --normal-font-size: 1em;
+    --small-font-size: .875em;
+    --smaller-font-size: .813em;
+   }
+ }
+
+  /* MAIN STYLING */
+ body {
+  margin: 0 0 var(--header-height) 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color)
+}
+
+h1, h2, h3, h4 {
+  color:  var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* REUSABLE CSS CLASSES  */
+
+.section {
+  padding: 2em 0 4em;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+}
+
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-3);
+}
+
+.section__subtitle, .section__subtitle {
+  text-align: center;
+}
+
+/* LAYOUT  */
+
+.container {
+  max-width: 768px;
+  margin-left: var(--mb-1-5);
+  margin-right: var(--mb-1-5);
+}
+
+.grid {
+  display: grid;
+  grid-gap: 1.5em;
+}
+
+/* NAVBAR  */
