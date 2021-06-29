@@ -94,6 +94,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: var(--title-color);
 }
 
 img {
@@ -231,7 +232,132 @@ img {
 }
 
 /* SHOW MENU  */
-
 .show-menu {
   bottom: 0;
 }
+
+/* HOME  */
+.home__container {
+  gap: 1em;
+}
+
+.home__content {
+  grid-template-columns: .5fr 3r;
+  padding-top: 3.5em;
+  align-items: center;
+}
+
+.home__social {
+  display: grid;
+  grid-template-columns: max-content;
+  row-gap: 1em;
+}
+
+.home__social-icon {
+  font-size: 1.25em;
+  color: var(--first-color);
+}
+
+.home__social-icon:hover {
+  color: var(--first-color-alt);
+}
+
+.home__blob {
+  width: 200px;
+  fill: var(--first-color);
+}
+
+.home__blob-img {
+  width: 170px;
+}
+
+.home__data {
+  grid-column: 1/3;
+}
+
+.home__title {
+  font-size: var(--big-font-size);
+}
+
+.home__subtitle {
+  font-size: var(--h3-font-size);
+  color: var(--text-color);
+  font-weight: var(--font-medium);
+  margin-bottom: var(--mb-0-75);
+}
+
+.home__description {
+  margin-bottom: var(--mb-2);
+}
+
+.home__scroll {
+  display: none;
+}
+
+.home__scroll-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--first-color);
+  transition: color 300ms ease-in, transform 200ms ease-in;
+}
+
+.home__scroll-button:hover {
+  transform: translateY(.25em);
+}
+
+.home__scroll-mouse {
+  font-size: 2em;
+}
+
+.home__scroll-name {
+  font-size: var(--small-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  margin-right: var(--mb-0-25);
+}
+
+.home__scroll-arrow {
+  font-size: 1.25em;
+}
+
+
+/* BUTTONS  */
+
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 1em;
+  transition: background-color 150ms ease-in, transform 500ms ease-in;
+  border-radius: .3em;
+  font-weight: var(--font-medium);
+}
+
+.button:hover {
+  background-color: var(--first-color-alt);
+}
+
+.button__icon {
+  display: inline-block;
+  transform: transform 300ms ease-in;
+}
+
+.button:hover .button__icon {
+  transform: translateX(.3em) scale(1.2);
+  transition: 200ms ease-in-out;
+}
+
+.button__icon:hover {
+  transform: scale(1.5);
+}
+
+/* .button:hover .button__icon {
+  transform: translate(.3em);
+} */
+
+/* ABOUT  */
+/* HOME  */
+/* SKILLS  */
+/* QUALIFICATION  */
+/* SERVICES  */
