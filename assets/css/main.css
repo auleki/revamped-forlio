@@ -14,7 +14,7 @@ html {
 :root {
   --header-height: 3em;
 
-  --hue-color: 0;
+  --hue-color: 270;
 
   /* BACKGROUND COLORS  */
   --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -463,21 +463,21 @@ img {
   background-color: var(--first-color-lighter);
 }
 
-.skills_react {
+.skills__react {
   width: 70%;
 }
 
-.skills_close .skills__list {
+.skills__close .skills__list {
   height: 0;
   overflow: hidden;
 }
 
-.skills_open .skills__list {
+.skills__open .skills__list {
   height: max-content;
   margin-bottom: var(--mb-2-5);
 }
 
-.skills_open .skills__arrow {
+.skills__open .skills__arrow {
   transform: rotate(-180deg);
 }
 

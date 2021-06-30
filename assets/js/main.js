@@ -27,11 +27,13 @@ function toggleSkills () {
   let itemClass = this.parentNode.className
   // console.log('CLICKING MENu')
   for (i = 0; i < skillsContent.length; i++) {
-    skillsContent[i].className = 'skill__content skills_close'
+    skillsContent[i].className = 'skills__content skills__close'
   }
-  if (itemClass === 'skill__content skill_close') {
-    this.parentNode.className = 'skill__content skills_open'
+  if (itemClass === 'skills__content skills__close') {
+    this.parentNode.className = 'skills__content skills__open'
   }
 }
 
-skillsHeader.forEach(el => el.addEventListener('click', toggleSkills))
+skillsHeader.forEach(el => {
+  el.addEventListener('click', toggleSkills)
+})
