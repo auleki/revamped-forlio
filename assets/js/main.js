@@ -4,7 +4,9 @@ const navMenu = document.getElementById('nav-menu'),
   navClose = document.getElementById('nav-close'),
   navLinks = document.querySelectorAll('.nav__link'),
   skillsContent = document.getElementsByClassName('skills__content'),
-  skillsHeader = document.querySelectorAll('.skills__header')
+  skillsHeader = document.querySelectorAll('.skills__header'),
+  tabs = document.querySelectorAll('[data-target]'),
+  tabContents = document.querySelectorAll('[data-content]')
 
 if (navToggle) {
   navToggle.addEventListener('click', () => {
@@ -35,3 +37,18 @@ function toggleSkills () {
 }
 
 skillsHeader.forEach(el => el.addEventListener('click', toggleSkills))
+
+// EXPERIENCE SECTION
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const target = document.querySelector(tab.dataset.target)
+    tabContents.forEach(tabContent => {
+      tabContent.classList.remove('qualification__active')
+    })
+    target.classList.remove('qualification__active')
+    tabs.forEach(tab => {
+      tab.classList.remove('qualification__active')
+    })
+    tab.classList.add('qualification__active')
+  })
+})

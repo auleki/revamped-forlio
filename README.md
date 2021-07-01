@@ -1,1 +1,1 @@
-# This is a new version of my portfolio. 
+# This is a new version of my portfolio.
