@@ -6,7 +6,10 @@ const navMenu = document.getElementById('nav-menu'),
   skillsContent = document.getElementsByClassName('skills__content'),
   skillsHeader = document.querySelectorAll('.skills__header'),
   tabs = document.querySelectorAll('[data-target]'),
-  tabContents = document.querySelectorAll('[data-content]')
+  tabContents = document.querySelectorAll('[data-content]'),
+  modalViews = document.querySelectorAll('.services__modal'),
+  modalButtons = document.querySelectorAll('.services__button'),
+  modalCloses = document.querySelectorAll('.services__modal-close')
 
 if (navToggle) {
   navToggle.addEventListener('click', () => {
@@ -50,5 +53,22 @@ tabs.forEach(tab => {
       tab.classList.remove('qualification__active')
     })
     tab.classList.add('qualification__active')
+  })
+})
+
+/*     SERVICES MODAL        */
+const modal = modalClick => {
+  modalViews[modalClick].classList.add('active-modal')
+}
+
+modalButtons.forEach((modalButton, i) => {
+  modalButton.addEventListener('click', () => modal(i))
+})
+
+modalCloses.forEach(modalClose => {
+  modalClose.addEventListener('click', () => {
+    modalViews.forEach(modalView => {
+      modalView.classList.remove('active-modal')
+    })
   })
 })
