@@ -74,7 +74,7 @@ modalCloses.forEach(modalClose => {
 })
 
 /*     SERVICES MODAL        */
-let swiper = new Swiper('.portfolio__container', {
+let swiperPortfolio = new Swiper('.portfolio__container', {
   cssMode: true,
   loop: true,
   navigation: {
@@ -88,6 +88,23 @@ let swiper = new Swiper('.portfolio__container', {
   keyboard: true
 })
 
-/*     SERVICES MODAL        */
+/*     TESTIMONIAL       */
+let swiperTestimonial = new Swiper('.testimonial__container', {
+  loop: true,
+  grabCursor: true,
+  spaceBetween: 48,
+  breakpoints: {
+    720: {
+      slidesPerView: 2
+    }
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+    dynamicBullets: true
+  },
+  mousewheel: true,
+  keyboard: true
+})
 
 /*     SERVICES MODAL        */
