@@ -11,7 +11,8 @@ const navMenu = document.getElementById('nav-menu'),
   modalButtons = document.querySelectorAll('.services__button'),
   modalCloses = document.querySelectorAll('.services__modal-close'),
   sections = document.querySelectorAll('section[id]'),
-  nav = document.getElementById('header')
+  nav = document.getElementById('header'),
+  themeButton = document.getElementById('theme-button')
 
 if (navToggle) {
   navToggle.addEventListener('click', () => {
@@ -75,7 +76,7 @@ modalCloses.forEach(modalClose => {
   })
 })
 
-/*     SERVICES MODAL        */
+/*     PORTFOLIO SLIDER        */
 let swiperPortfolio = new Swiper('.portfolio__container', {
   cssMode: true,
   loop: true,
@@ -152,3 +153,33 @@ function scrollTop () {
 window.addEventListener('scroll', scrollTop)
 
 // window.addEventListener('scroll', scrollActive)
+
+/*     DARK & LIGHT THEME SWITCH        */
+const darkTheme = 'dark-theme'
+const iconTheme = 'uil-sun'
+const darkIcon = 'uil-moon'
+const lightIcon = 'uil-sun'
+
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selected-icon')
+
+// document.classList.r
+
+const getCurrentTheme = () =>
+  document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+const getCurrentIcon = () =>
+  themeButton.classList.contains(iconTheme) ? darkIcon : lightIcon
+
+if (selectedTheme) {
+  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](
+    darkTheme
+  )
+  themeButton.classList[selectedIcon === darkIcon ? 'add' : 'remove'](iconTheme)
+}
+
+themeButton.addEventListener('click', () => {
+  document.body.classList.toggle(darkTheme)
+  themeButton.classList.toggle(iconTheme)
+  localStorage.setItem('selected-theme', getCurrentTheme())
+  localStorage.setItem('selected-icon', getCurrentIcon())
+})
