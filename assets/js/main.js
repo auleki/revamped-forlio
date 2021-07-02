@@ -142,4 +142,13 @@ function scrollHeader () {
 
 window.addEventListener('scroll', scrollHeader)
 
+function scrollTop () {
+  const scrollUp = document.getElementById('scroll-up')
+  const scrollY = window.pageYOffset
+
+  if (scrollY >= 500) scrollUp.classList.add('show-scroll')
+  else scrollUp.classList.remove('show-scroll')
+}
+window.addEventListener('scroll', scrollTop)
+
 // window.addEventListener('scroll', scrollActive)

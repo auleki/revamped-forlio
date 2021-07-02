@@ -906,3 +906,27 @@ img {
   color: #fff;
 }
 
+.scrollup {
+  position: fixed;
+  right: 1em;
+  bottom: 0;
+  background-color: var(--first-color);
+  opacity: .8;
+  padding: 0 .3em;
+  border-radius: .4em;
+  z-index: var(--z-tooltip);
+  transition: 400ms ease-in;
+}
+
+.scrollup:hover {
+  background-color: var(--first-color-alt);
+}
+
+.show-scroll {
+  bottom: 5em;
+}
+
+.scrollup__icon {
+  font-size: 1.5em;
+  color: #fff;
+}
