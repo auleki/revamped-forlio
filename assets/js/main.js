@@ -152,7 +152,7 @@ function scrollTop () {
 }
 window.addEventListener('scroll', scrollTop)
 
-// window.addEventListener('scroll', scrollActive)
+window.addEventListener('scroll', scrollActive)
 
 /*     DARK & LIGHT THEME SWITCH        */
 const darkTheme = 'dark-theme'
