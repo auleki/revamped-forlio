@@ -470,6 +470,7 @@ img {
 
 /* SKILLS  */
 .skills__container {
+  /* background: rgb(201, 70, 70); */
   row-gap: 0;
 }
 
@@ -530,8 +531,30 @@ img {
   background-color: var(--first-color-lighter);
 }
 
+.skills__data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .skills__react {
   width: 70%;
+}
+
+.skills__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+
+.skill__icon {
+  text-align: center;
+}
+
+.skill__icon img {
+  max-width: 30px;
+  height: auto;
 }
 
 .skills__close .skills__list {
