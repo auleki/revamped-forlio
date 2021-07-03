@@ -5,3 +5,5 @@
 [] to return to education / work section 
 
 [] there is no skills container class in html, fix that
+
+[] fix active link bug on navbar 

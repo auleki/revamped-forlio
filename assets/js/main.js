@@ -51,7 +51,7 @@ tabs.forEach(tab => {
     tabContents.forEach(tabContent => {
       tabContent.classList.remove('qualification__active')
     })
-    target.classList.remove('qualification__active')
+    target.classList.add('qualification__active')
     tabs.forEach(tab => {
       tab.classList.remove('qualification__active')
     })
@@ -152,7 +152,7 @@ function scrollTop () {
 }
 window.addEventListener('scroll', scrollTop)
 
-window.addEventListener('scroll', scrollActive)
+// window.addEventListener('scroll', scrollActive)
 
 /*     DARK & LIGHT THEME SWITCH        */
 const darkTheme = 'dark-theme'
